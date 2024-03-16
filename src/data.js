@@ -16,6 +16,12 @@ import blogImgN3 from './assets/img/topViewPhoto.png'
 import blogImgN4 from './assets/img/peopleTopView.png'
 import blogImgN5 from './assets/img/manRed.png'
 import blogImgN6 from './assets/img/groupOfPerson.png'
+import portfolioN1 from './assets/img/work1.png'
+import portfolioN2 from './assets/img/work2.png'
+import portfolioN3 from './assets/img/work3.png'
+import portfolioN4 from './assets/img/work4.png'
+import portfolioN5 from './assets/img/work5.png'
+import portfolioN6 from './assets/img/work6.png'
 
 export const works = [
   {
@@ -173,5 +179,44 @@ export const blogs = [
     date: '27 Jan 2021',
     title: 'How one Webflow user grew his single person consultancy from $0-100K in 14 months',
     text: 'See how pivoting to Webflow changed one person’s sales strategy and allowed him to attract',
+  },
+];
+
+export const portfolios = [
+  {
+    id: 1,
+    title: 'Template 1',
+    text: 'Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.',
+    img: portfolioN1,
+  },
+  {
+    id: 2,
+    title: 'Template 2',
+    text: 'Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.',
+    img: portfolioN2,
+  },
+  {
+    id: 3,
+    title: 'Template 3',
+    text: 'Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.',
+    img: portfolioN3,
+  },
+  {
+    id: 4,
+    title: 'Template 4',
+    text: 'Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.',
+    img: portfolioN4,
+  },
+  {
+    id: 5,
+    title: 'Template 5',
+    text: 'Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.',
+    img: portfolioN5,
+  },
+  {
+    id: 6,
+    title: 'Template 6',
+    text: 'Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.',
+    img: portfolioN6,
   },
 ];

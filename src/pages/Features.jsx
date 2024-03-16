@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom"
+import React from "react";
 
 //data
 import { benefits } from "../data"
+
+//material ui
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+} from "@material-tailwind/react";
 
 // images
 import heroImg from '../assets/img/Feature-Hero.svg'
@@ -16,7 +24,20 @@ import freelancer from '../assets/img/getFree.png'
 import working24 from '../assets/img/working24.png'
 import personUsingMackbook from '../assets/img/personUsingMackbookPro.png'
 
+function Icon({ id, open }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"
+      className={`${id === open ? "rotate-45" : ""} h-5 w-5 transition-transform`}>
+      <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M20 12h-8m0 0H4m8 0V4m0 8v8" />
+    </svg>
+  );
+}
+
 const Features = () => {
+  const [open, setOpen] = React.useState(0);
+
+  const handleOpen = (value) => setOpen(open === value ? 0 : value);
+
   return (
     <>
       <div className="py-32 bg-tint-blue text-white">
@@ -102,6 +123,47 @@ const Features = () => {
             <p className="font-medium text-lg leading-8">Quick Delivery</p>
             <h2 className="font-semibold text-[38px] leading-[56px]">Guranteed 1 week delivery for standard five pager website</h2>
             <p className="text-base leading-7 opacity-60">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="py-32">
+        <div className="w-full max-w-7xl mx-auto px-5 flex items-start justify-between">
+          <div className="space-y-4 mr-[109px]">
+            <h2 className="font-semibold text-4xl leading-[56px]">Frequently asked questions</h2>
+            <Link to='/contact' className="inline-block text-royalBlue font-medium text-base leading-8">Contact us for more info</Link>
+          </div>
+          <div className="flex flex-col w-full">
+            <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
+              <AccordionHeader onClick={() => handleOpen(1)}><p className="text-2xl font-medium leading-9"><span className="inline-block font-normal text-royalBlue text-2xl leading-9 mr-5">01</span>How much time does it take?</p></AccordionHeader>
+              <AccordionBody className='text-lg font-medium leading-8 pl-12'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br /> eiusmod tempor incididunt ut labore et dolore magna aliqua.o
+              </AccordionBody>
+            </Accordion>
+            <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
+              <AccordionHeader onClick={() => handleOpen(2)}><p className="text-2xl font-medium leading-9"><span className="inline-block font-normal text-royalBlue text-2xl leading-9 mr-5">02</span>What is your class naming convention?</p></AccordionHeader>
+              <AccordionBody className='text-lg font-medium leading-8 pl-12'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br /> eiusmod tempor incididunt ut labore et dolore magna aliqua.o
+              </AccordionBody>
+            </Accordion>
+            <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
+              <AccordionHeader onClick={() => handleOpen(3)}><p className="text-2xl font-medium leading-9"><span className="inline-block font-normal text-royalBlue text-2xl leading-9 mr-5">03</span>How do you communicate?</p></AccordionHeader>
+              <AccordionBody className='text-lg font-medium leading-8 pl-12'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br /> eiusmod tempor incididunt ut labore et dolore magna aliqua.o
+              </AccordionBody>
+            </Accordion>
+            <Accordion open={open === 4} icon={<Icon id={4} open={open} />}>
+              <AccordionHeader onClick={() => handleOpen(4)}><p className="text-2xl font-medium leading-9"><span className="inline-block font-normal text-royalBlue text-2xl leading-9 mr-5">04</span>I have a bigger project. Can you handle it?</p></AccordionHeader>
+              <AccordionBody className='text-lg font-medium leading-8 pl-12'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br /> eiusmod tempor incididunt ut labore et dolore magna aliqua.o
+              </AccordionBody>
+            </Accordion>
+            <Accordion open={open === 5} icon={<Icon id={5} open={open} />}>
+              <AccordionHeader onClick={() => handleOpen(5)}><p className="text-2xl font-medium leading-9"><span className="inline-block font-normal text-royalBlue text-2xl leading-9 mr-5">05</span>What is your class naming convention?</p></AccordionHeader>
+              <AccordionBody className='text-lg font-medium leading-8 pl-12'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br /> eiusmod tempor incididunt ut labore et dolore magna aliqua.o
+              </AccordionBody>
+            </Accordion>
           </div>
         </div>
       </div>

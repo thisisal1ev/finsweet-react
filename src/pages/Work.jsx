@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
+import { portfolios } from "../data"
 
 //images
+import blackArrow from '../assets/img/black-arrow.svg'
 
 const Work = () => {
   return (
@@ -69,7 +71,23 @@ const Work = () => {
 
       <div className="py-32">
         <div className="w-full max-w-7xl mx-auto px-5">
-          
+          <ul className="grid grid-cols-2 gap-y-16 gap-x-[34px]">
+            {
+              portfolios.map((portfolio) => {
+                return (
+                  <li key={portfolio.id}>
+                    <img className="mb-6" src={portfolio.img} alt={portfolio.title} />
+                    <h3 className="mb-3 font-semibold text-[38px] leading-[56px]">{portfolio.title}</h3>
+                    <p className="mb-6 text-base leading-7 opacity-70">{portfolio.text}</p>
+                    <Link className="space-x-4 flex items-center">
+                      <p>View Portfolio</p>
+                      <img src={blackArrow} alt="arrow" />
+                    </Link>
+                  </li>
+                )
+              })
+            }
+          </ul>
         </div>
       </div>
 

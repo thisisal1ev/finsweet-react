@@ -129,7 +129,7 @@ const About = () => {
             spaceBetween={32}
             centeredSlides={false}
             autoplay={{
-              delay: 1000,
+              delay: 10000,
               disableOnInteraction: false,
             }}
             loop={true}

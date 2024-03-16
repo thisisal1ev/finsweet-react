@@ -35,7 +35,7 @@ function Icon({ id, open }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"
       className={`${id === open ? "rotate-45" : ""} h-5 w-5 transition-transform`}>
-      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 12h-8m0 0H4m8 0V4m0 8v8" />
+      <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M20 12h-8m0 0H4m8 0V4m0 8v8" />
     </svg>
   );
 }
@@ -102,7 +102,7 @@ const Home = () => {
 
           <div className="flex items-center justify-between space-x-8">
             <div className="relative z-10">
-              <div className="absolute bg-[#1C1E53] w-[396px] h-[575px]">
+              <div className="absolute bg-gradient-to-tl from-[#1C1E53] from-42% w-[396px] h-[575px]">
                 <div className="w-[313px] absolute bottom-[76px] right-12">
                   <h3 className="font-semibold text-2xl leading-9 mb-4">
                     Workhub office Webflow Webflow Design
@@ -118,7 +118,7 @@ const Home = () => {
             </div>
             <div className="flex flex-col space-y-8">
               <div className="relative z-10">
-                <div className="absolute bg-[#1C1E53] w-[398px] h-[273px]">
+                <div className="absolute bg-gradient-to-tl from-[#1C1E53] from-42% w-[398px] h-[273px]">
                   <div className="absolute space-y-3 bottom-[40px] left-14">
                     <h3 className="font-semibold text-2xl leading-9">Unisaas Website<br /> Design</h3>
                     <Link to='/work' className="inline-flex items-center space-x-4">
@@ -231,7 +231,6 @@ const Home = () => {
             <Link to='/contact' className="inline-block text-royalBlue font-medium text-base leading-8">Contact us for more info</Link>
           </div>
           <div className="flex flex-col w-full">
-
             <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
               <AccordionHeader onClick={() => handleOpen(1)}><p className="text-2xl font-medium leading-9"><span className="inline-block font-normal text-royalBlue text-2xl leading-9 mr-5">01</span>How much time does it take?</p></AccordionHeader>
               <AccordionBody className='text-lg font-medium leading-8 pl-12'>
@@ -239,25 +238,25 @@ const Home = () => {
               </AccordionBody>
             </Accordion>
             <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
-              <AccordionHeader onClick={() => handleOpen(2)}><p className="text-2xl font-medium leading-9"><span className="inline-block font-normal text-royalBlue text-2xl leading-9 mr-5">01</span>How much time does it take?</p></AccordionHeader>
+              <AccordionHeader onClick={() => handleOpen(2)}><p className="text-2xl font-medium leading-9"><span className="inline-block font-normal text-royalBlue text-2xl leading-9 mr-5">02</span>What is your class naming convention?</p></AccordionHeader>
               <AccordionBody className='text-lg font-medium leading-8 pl-12'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br /> eiusmod tempor incididunt ut labore et dolore magna aliqua.o
               </AccordionBody>
             </Accordion>
             <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
-              <AccordionHeader onClick={() => handleOpen(3)}><p className="text-2xl font-medium leading-9"><span className="inline-block font-normal text-royalBlue text-2xl leading-9 mr-5">01</span>How much time does it take?</p></AccordionHeader>
+              <AccordionHeader onClick={() => handleOpen(3)}><p className="text-2xl font-medium leading-9"><span className="inline-block font-normal text-royalBlue text-2xl leading-9 mr-5">03</span>How do you communicate?</p></AccordionHeader>
               <AccordionBody className='text-lg font-medium leading-8 pl-12'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br /> eiusmod tempor incididunt ut labore et dolore magna aliqua.o
               </AccordionBody>
             </Accordion>
             <Accordion open={open === 4} icon={<Icon id={4} open={open} />}>
-              <AccordionHeader onClick={() => handleOpen(4)}><p className="text-2xl font-medium leading-9"><span className="inline-block font-normal text-royalBlue text-2xl leading-9 mr-5">01</span>How much time does it take?</p></AccordionHeader>
+              <AccordionHeader onClick={() => handleOpen(4)}><p className="text-2xl font-medium leading-9"><span className="inline-block font-normal text-royalBlue text-2xl leading-9 mr-5">04</span>I have a bigger project. Can you handle it?</p></AccordionHeader>
               <AccordionBody className='text-lg font-medium leading-8 pl-12'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br /> eiusmod tempor incididunt ut labore et dolore magna aliqua.o
               </AccordionBody>
             </Accordion>
             <Accordion open={open === 5} icon={<Icon id={5} open={open} />}>
-              <AccordionHeader onClick={() => handleOpen(5)}><p className="text-2xl font-medium leading-9"><span className="inline-block font-normal text-royalBlue text-2xl leading-9 mr-5">01</span>How much time does it take?</p></AccordionHeader>
+              <AccordionHeader onClick={() => handleOpen(5)}><p className="text-2xl font-medium leading-9"><span className="inline-block font-normal text-royalBlue text-2xl leading-9 mr-5">05</span>What is your class naming convention?</p></AccordionHeader>
               <AccordionBody className='text-lg font-medium leading-8 pl-12'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br /> eiusmod tempor incididunt ut labore et dolore magna aliqua.o
               </AccordionBody>
@@ -269,13 +268,14 @@ const Home = () => {
       <div className="py-32 bg-grey text-white">
         <div className="w-full max-w-7xl mx-auto px-5 flex items-center justify-between relative">
           <div className="absolute top-0">
-            <div className="w-[464px] absolute top-16 left-24">
+            <div className="w-[464px] absolute top-16 left-24 z-10">
               <h2 className="font-semibold text-[54px] leading-[74px]">Building stellar websites for early startups</h2>
               <p className="font-medium text-base lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.</p>
             </div>
           </div>
-          <img className="h-full" src={faqImg} alt="Photo" />
-          <form className="w-full flex flex-col px-24 pt-[74px] pb-12 bg-[#1C1E53]" onSubmit={(e) => e.preventDefault()}>
+          <div className="bg-gradient-to-tl from-[#1C1E53] absolute h-full w-[1240px]"></div>
+          <img className="h-screen" src={faqImg} alt="Photo" />
+          <form className="h-screen flex flex-col px-24 pt-[74px] pb-12 bg-[#1C1E53] relative z-10" onSubmit={(e) => e.preventDefault()}>
             <h3 className="mb-4 font-medium text-[32px] leading-[48px] ">Send inquiry</h3>
             <p className="mb-10 text-base font-medium leading-7 text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
             <div className="space-y-4 flex flex-col mb-10">
