@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -186,7 +186,7 @@ const Home = () => {
             </SwiperSlide>
             <SwiperSlide>
               <h3 className="font-medium text-[32px] leading-[48px] mb-12">
-                <q>The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus.</q>
+                <q>The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus12.</q>
               </h3>
               <div className="flex space-x-4">
                 <img src={jennyWilson} alt="Jenny Wilson" />
@@ -198,7 +198,7 @@ const Home = () => {
             </SwiperSlide>
             <SwiperSlide>
               <h3 className="font-medium text-[32px] leading-[48px] mb-12">
-                <q>The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus.</q>
+                <q>The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus.12335</q>
               </h3>
               <div className="flex space-x-4">
                 <img src={jennyWilson} alt="Jenny Wilson" />
